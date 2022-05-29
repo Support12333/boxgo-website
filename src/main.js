@@ -5,9 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import vueSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import '@assets/font/iconfont.css'
-import { Dialog } from "element-ui";
+import { Dialog, Button } from "element-ui";
 Vue.use(vueSwiper)
-Vue.use(Dialog)
+Vue.use(Dialog).use(Button)
 
 Vue.config.productionTip = false
 

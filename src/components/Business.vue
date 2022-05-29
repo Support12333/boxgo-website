@@ -37,7 +37,7 @@
               <div class="txt">
                 支持全球金融兑换服务，响应快，资金安全有保障，24小时专属客服。
               </div>
-              <div class="footer">
+              <div class="footer" @click="show = true">
                 <span>立即了解</span>
                 <i class="iconfont icon-arrow"></i>
               </div>
@@ -51,7 +51,7 @@
               <div class="txt">
                 全球资源代运营服务，24小时专属优化师服务，实时策划调整，为企业ROI保驾护航。
               </div>
-              <div class="footer">
+              <div class="footer" @click="show = true">
                 <span>立即了解</span>
                 <i class="iconfont icon-arrow"></i>
               </div>
@@ -65,7 +65,7 @@
               <div class="txt">
                 一手对接全球海量优质KOL，覆盖主流媒体平台及热门出海地区。
               </div>
-              <div class="footer">
+              <div class="footer" @click="show = true">
                 <span>立即了解</span>
                 <i class="iconfont icon-arrow"></i>
               </div>
@@ -79,7 +79,7 @@
               <div class="txt">
                 全球出海担保服务，价格透明合理，公平公正交易，保障供方与需方资金安全，为您省时省心。
               </div>
-              <div class="footer">
+              <div class="footer" @click="show = true">
                 <span>立即了解</span>
                 <i class="iconfont icon-arrow"></i>
               </div>
@@ -93,7 +93,7 @@
               <div class="txt">
                 支持全球各语种翻译，服务贴心，实时响应，严格保密，追求客户长期合作共赢。
               </div>
-              <div class="footer">
+              <div class="footer" @click="show = true">
                 <span>立即了解</span>
                 <i class="iconfont icon-arrow"></i>
               </div>
@@ -107,7 +107,7 @@
               <div class="txt">
                 支持欧美、东南亚、东亚地区国际短信，多年架构和方案设计经验，为客户提供定制化解决方案。
               </div>
-              <div class="footer">
+              <div class="footer" @click="show = true">
                 <span>立即了解</span>
                 <i class="iconfont icon-arrow"></i>
               </div>
@@ -125,7 +125,12 @@
     >
       <div class="service">
         <div class="images">
-          <img src="" />
+          <img src="@assets/qr.jpg" />
+        </div>
+        <div class="tips">扫描二维码添加VX</div>
+        <div class="tips">能获得更方便及时的回复哦~</div>
+        <div class="footer">
+          <el-button type="primary" @click="show = false">已添加</el-button>
         </div>
       </div>
     </el-dialog>
@@ -339,7 +344,41 @@ export default {
     }
 
     .service {
-      padding: 84px 0;
+      padding: 42px 0;
+
+      .images {
+        position: relative;
+        .fj(center);
+
+        > img {
+          width: 200px;
+        }
+      }
+
+      .tips {
+        font-size: 20px;
+        line-height: 32px;
+        font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+        font-weight: 400;
+        color: #333333;
+        text-align: center;
+      }
+
+      .footer {
+        margin-top: 24px;
+        .fj(center);
+
+        > button {
+          padding: 0;
+          .size(126px, 40px);
+          font-size: 16px;
+          line-height: 24px;
+          font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+          font-weight: 400;
+          color: #ffffff;
+          border-radius: 6px;
+        }
+      }
     }
   }
 }
@@ -410,6 +449,37 @@ export default {
                 line-height: 0.64rem;
               }
             }
+          }
+        }
+      }
+    }
+
+    /deep/.serviceDialog {
+      width: 80% !important;
+      border-radius: 0.48rem;
+
+      .service {
+        padding: 1.28rem 0;
+
+        .images {
+          > img {
+            width: 8rem;
+          }
+        }
+
+        .tips {
+          font-size: 0.64rem;
+          line-height: 1.12rem;
+        }
+
+        .footer {
+          margin-top: 0.96rem;
+
+          > button {
+            .size(5.04rem, 1.6rem);
+            font-size: 0.64rem;
+            line-height: 0.96rem;
+            border-radius: 0.24rem;
           }
         }
       }
