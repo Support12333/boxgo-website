@@ -125,7 +125,7 @@
     >
       <div class="service">
         <div class="images">
-          <img src="@assets/qr.jpg" />
+          <img src="@assets/qr.png" />
         </div>
         <div class="tips">扫描二维码添加VX</div>
         <div class="tips">能获得更方便及时的回复哦~</div>
