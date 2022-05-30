@@ -22,7 +22,6 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <div class="title">聚合出海</div>
               <div class="tit">海外数字化营销一站式服务商</div>
               <div class="txt">
                 <span>用数字化营销高效链接</span>
@@ -40,8 +39,7 @@
             <div class="col-12">
               <div class="title">技术+服务扩展营销边界</div>
               <div class="txt">
-                <span>深度赋能出海场景需求</span>
-                <span>海外主流媒体渠道以及优质本土化流量资源全覆盖</span>
+                深度赋能出海需求，海外主流媒体和本土化优质资源全覆盖
               </div>
             </div>
           </div>

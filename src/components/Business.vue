@@ -10,106 +10,148 @@
         <div class="col-12 col-lg-2"></div>
         <div class="col-12 col-lg-8">
           <div class="describe" id="business2">
-            聚合出海是专注海外数字营销解决方案的一站式服务平台，为企业提供可定制组合的全案服务产品，满足电商、游戏、APP、品牌等中国企业的海外商业拓展大媒体开户业务
+            为企业提供可定制组合的全案服务产品，满足电商、游戏、APP、品牌等中国企业的海外商业深入拓展
           </div>
         </div>
         <div class="col-12 col-lg-2"></div>
       </div>
       <div class="row body">
         <div class="col-12 col-lg-8" id="business3">
-          <div class="item">
+          <div
+            class="item"
+            @mouseenter="hoverItem($event)"
+            @mouseleave="leaveItem($event)"
+          >
             <div>
               <div class="tit">大媒体开户业务</div>
               <div class="txt">
-                等主流媒体及当地媒体一站站式账户管理服务，帮助企业实现绿色通道快速开户。
+                facebook、google、tiktok等主流媒体及当地媒体一站式账户管理服务，帮助企业实现绿色通道快速开户
               </div>
-              <div class="footer" @click="show = true">
-                <span>立即了解</span>
-                <i class="iconfont icon-arrow"></i>
+              <div class="footer">
+                <div @click="show = true">
+                  <span>立即了解</span>
+                  <i class="iconfont icon-arrow"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-lg-4" id="business4">
-          <div class="item">
+          <div
+            class="item"
+            @mouseenter="hoverItem($event)"
+            @mouseleave="leaveItem($event)"
+          >
             <div>
               <div class="tit">金融兑换业务</div>
               <div class="txt">
-                支持全球金融兑换服务，响应快，资金安全有保障，24小时专属客服。
+                支持全球金融兑换服务，响应快，资金安全有保障，24小时专属客服
               </div>
-              <div class="footer" @click="show = true">
-                <span>立即了解</span>
-                <i class="iconfont icon-arrow"></i>
+              <div class="footer">
+                <div @click="show = true">
+                  <span>立即了解</span>
+                  <i class="iconfont icon-arrow"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-lg-6" id="business5">
-          <div class="item">
+          <div
+            class="item"
+            @mouseenter="hoverItem($event)"
+            @mouseleave="leaveItem($event)"
+          >
             <div>
               <div class="tit">资深代运营业务</div>
               <div class="txt">
-                全球资源代运营服务，24小时专属优化师服务，实时策划调整，为企业ROI保驾护航。
+                全球资源代运营服务，24小时专属优化师服务，实时策划调整，为企业ROI保驾护航
               </div>
-              <div class="footer" @click="show = true">
-                <span>立即了解</span>
-                <i class="iconfont icon-arrow"></i>
+              <div class="footer">
+                <div @click="show = true">
+                  <span>立即了解</span>
+                  <i class="iconfont icon-arrow"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-lg-6" id="business6">
-          <div class="item">
+          <div
+            class="item"
+            @mouseenter="hoverItem($event)"
+            @mouseleave="leaveItem($event)"
+          >
             <div>
               <div class="tit">海外红人营销</div>
               <div class="txt">
-                一手对接全球海量优质KOL，覆盖主流媒体平台及热门出海地区。
+                一手对接全球海量优质KOL，覆盖主流媒体平台及热门出海地区
               </div>
-              <div class="footer" @click="show = true">
-                <span>立即了解</span>
-                <i class="iconfont icon-arrow"></i>
+              <div class="footer">
+                <div @click="show = true">
+                  <span>立即了解</span>
+                  <i class="iconfont icon-arrow"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-lg-4" id="business7">
-          <div class="item">
+          <div
+            class="item"
+            @mouseenter="hoverItem($event)"
+            @mouseleave="leaveItem($event)"
+          >
             <div>
               <div class="tit">出海担保业务</div>
               <div class="txt">
-                全球出海担保服务，价格透明合理，公平公正交易，保障供方与需方资金安全，为您省时省心。
+                全球出海担保服务，价格透明合理，公平公正交易，保障供方与需方资金安全，为您省时省心
               </div>
-              <div class="footer" @click="show = true">
-                <span>立即了解</span>
-                <i class="iconfont icon-arrow"></i>
+              <div class="footer">
+                <div @click="show = true">
+                  <span>立即了解</span>
+                  <i class="iconfont icon-arrow"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-lg-4" id="business8">
-          <div class="item">
+          <div
+            class="item"
+            @mouseenter="hoverItem($event)"
+            @mouseleave="leaveItem($event)"
+          >
             <div>
               <div class="tit">人工翻译业务</div>
               <div class="txt">
-                支持全球各语种翻译，服务贴心，实时响应，严格保密，追求客户长期合作共赢。
+                支持全球各语种翻译，服务贴心，实时响应，严格保密，追求客户长期合作共赢
               </div>
-              <div class="footer" @click="show = true">
-                <span>立即了解</span>
-                <i class="iconfont icon-arrow"></i>
+              <div class="footer">
+                <div @click="show = true">
+                  <span>立即了解</span>
+                  <i class="iconfont icon-arrow"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-lg-4" id="business9">
-          <div class="item">
+          <div
+            class="item"
+            @mouseenter="hoverItem($event)"
+            @mouseleave="leaveItem($event)"
+          >
             <div>
               <div class="tit">国际短信业务</div>
               <div class="txt">
-                支持欧美、东南亚、东亚地区国际短信，多年架构和方案设计经验，为客户提供定制化解决方案。
+                支持欧美、东南亚、东亚地区国际短信，多年架构和方案设计经验，为客户提供定制化解决方案
               </div>
-              <div class="footer" @click="show = true">
-                <span>立即了解</span>
-                <i class="iconfont icon-arrow"></i>
+              <div class="footer">
+                <div @click="show = true">
+                  <span>立即了解</span>
+                  <i class="iconfont icon-arrow"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -155,6 +197,34 @@ export default {
         Restore(`#business${index}`);
       }
     });
+  },
+  methods: {
+    // 进入
+    hoverItem(e) {
+      const item = $(e.target).children();
+      if ($(window).width() < 576) {
+        const htmlArr = window.getComputedStyle(
+          window.document.documentElement
+        );
+        const fontSize = htmlArr["font-size"].replace(/px/g, "");
+        item.css("height", item[0].scrollHeight + 0.8 * fontSize);
+      } else {
+        item.css("height", item[0].scrollHeight + 40);
+      }
+    },
+    // 离开
+    leaveItem(e) {
+      const item = $(e.target).children();
+      if ($(window).width() < 576) {
+        const htmlArr = window.getComputedStyle(
+          window.document.documentElement
+        );
+        const fontSize = htmlArr["font-size"].replace(/px/g, "");
+        item.css("height", 2.56 * fontSize);
+      } else {
+        item.css("height", 84);
+      }
+    },
   },
 };
 </script>
@@ -224,16 +294,13 @@ export default {
 
         &:hover {
           transform: scale(1.02);
-
-          > div {
-            bottom: 0;
-          }
         }
 
         > div {
           position: absolute;
-          bottom: -61px;
-          padding: 40px 32px;
+          bottom: 0;
+          padding: 40px 32px 0;
+          height: 84px;
           transition: all 0.4s;
 
           .tit {
@@ -253,28 +320,42 @@ export default {
 
           .footer {
             margin-top: 8px;
-            font-size: 16px;
-            line-height: 21px;
-            font-family: Microsoft YaHei-Regular, Microsoft YaHei;
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.8);
-            cursor: pointer;
-            .fa(center);
-            transition: all 0.4s;
+            display: flex;
 
-            &:hover {
-              color: rgba(255, 255, 255, 1);
+            > div {
+              position: relative;
+              font-size: 16px;
+              line-height: 21px;
+              font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+              font-weight: 400;
+              color: rgba(255, 255, 255, 0.8);
+              cursor: pointer;
+              .fa(center);
+              transition: all 0.4s;
+
+              &::after {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                content: "";
+                border-bottom: 3px solid #0086ff;
+              }
+
+              &:hover {
+                color: rgba(255, 255, 255, 1);
+
+                > i {
+                  margin-left: 24px;
+                }
+              }
 
               > i {
-                margin-left: 16px;
+                margin-left: 4px;
+                font-size: 16px;
+                line-height: 16px;
+                transition: all 0.4s;
               }
-            }
-
-            > i {
-              margin-left: 4px;
-              font-size: 16px;
-              line-height: 16px;
-              transition: all 0.4s;
             }
           }
         }
@@ -418,8 +499,9 @@ export default {
           height: 18.24rem;
 
           > div {
+            padding: 0.8rem 0.64rem 0;
             bottom: 0;
-            padding: 0.8rem 0.64rem;
+            height: 2.56rem;
 
             .tit {
               font-size: 0.96rem;
@@ -434,19 +516,26 @@ export default {
 
             .footer {
               margin-top: 0.32rem;
-              font-size: 0.64rem;
-              line-height: 0.84rem;
 
-              &:hover {
-                > i {
-                  margin-left: 0.4rem;
-                }
-              }
-
-              > i {
-                margin-left: 0.16rem;
+              > div {
                 font-size: 0.64rem;
-                line-height: 0.64rem;
+                line-height: 0.84rem;
+
+                &::after {
+                  border-bottom-width: 0.12rem;
+                }
+
+                &:hover {
+                  > i {
+                    margin-left: 0.8rem;
+                  }
+                }
+
+                > i {
+                  margin-left: 0.16rem;
+                  font-size: 0.64rem;
+                  line-height: 0.64rem;
+                }
               }
             }
           }

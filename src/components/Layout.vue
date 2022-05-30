@@ -3,16 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-6 col-lg-4 logo">
-          <img
-            src="@assets/logo-blue.png"
-            @click="scrollToID('#home', 100)"
-            v-if="show || nav"
-          />
-          <img
-            src="@assets/logo-white.png"
-            @click="scrollToID('#home', 100)"
-            v-else
-          />
+          <img src="@assets/logo.png" @click="scrollToID('#home', 100)" />
         </div>
         <div class="col-6 col-lg-8 flex">
           <i
