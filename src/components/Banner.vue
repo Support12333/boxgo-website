@@ -40,7 +40,8 @@
               <div>
                 <div class="title">技术+服务扩展营销边界</div>
                 <div class="txt">
-                  深度赋能出海需求，海外主流媒体和本土化优质资源全覆盖
+                  <span>深度赋能出海需求</span>
+                  <span>海外主流媒体和本土化优质资源全覆盖</span>
                 </div>
               </div>
             </div>
