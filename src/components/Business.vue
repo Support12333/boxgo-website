@@ -21,7 +21,6 @@
             class="item"
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
-            @click="show = true"
           >
             <div class="bg"></div>
             <div class="content">
@@ -30,7 +29,7 @@
                 facebook、google、tiktok等主流媒体及当地媒体一站式账户管理服务，帮助企业实现绿色通道快速开户
               </div>
               <div class="footer">
-                <div>
+                <div @click="show = true">
                   <span>立即了解</span>
                   <i class="iconfont icon-arrow"></i>
                 </div>
@@ -43,7 +42,6 @@
             class="item"
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
-            @click="show = true"
           >
             <div class="bg"></div>
             <div class="content">
@@ -52,7 +50,7 @@
                 支持全球金融兑换服务，响应快，资金安全有保障，24小时专属客服
               </div>
               <div class="footer">
-                <div>
+                <div @click="show = true">
                   <span>立即了解</span>
                   <i class="iconfont icon-arrow"></i>
                 </div>
@@ -65,7 +63,6 @@
             class="item"
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
-            @click="show = true"
           >
             <div class="bg"></div>
             <div class="content">
@@ -74,7 +71,7 @@
                 全球资源代运营服务，24小时专属优化师服务，实时策划调整，为企业ROI保驾护航
               </div>
               <div class="footer">
-                <div>
+                <div @click="show = true">
                   <span>立即了解</span>
                   <i class="iconfont icon-arrow"></i>
                 </div>
@@ -87,7 +84,6 @@
             class="item"
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
-            @click="show = true"
           >
             <div class="bg"></div>
             <div class="content">
@@ -96,7 +92,7 @@
                 一手对接全球海量优质KOL，覆盖主流媒体平台及热门出海地区
               </div>
               <div class="footer">
-                <div>
+                <div @click="show = true">
                   <span>立即了解</span>
                   <i class="iconfont icon-arrow"></i>
                 </div>
@@ -109,7 +105,6 @@
             class="item"
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
-            @click="show = true"
           >
             <div class="bg"></div>
             <div class="content">
@@ -118,7 +113,7 @@
                 全球出海担保服务，价格透明合理，公平公正交易，保障供方与需方资金安全，为您省时省心
               </div>
               <div class="footer">
-                <div>
+                <div @click="show = true">
                   <span>立即了解</span>
                   <i class="iconfont icon-arrow"></i>
                 </div>
@@ -131,7 +126,6 @@
             class="item"
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
-            @click="show = true"
           >
             <div class="bg"></div>
             <div class="content">
@@ -140,7 +134,7 @@
                 支持全球各语种翻译，服务贴心，实时响应，严格保密，追求客户长期合作共赢
               </div>
               <div class="footer">
-                <div>
+                <div @click="show = true">
                   <span>立即了解</span>
                   <i class="iconfont icon-arrow"></i>
                 </div>
@@ -153,7 +147,6 @@
             class="item"
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
-            @click="show = true"
           >
             <div class="bg"></div>
             <div class="content">
@@ -162,7 +155,7 @@
                 支持欧美、东南亚、东亚地区国际短信，多年架构和方案设计经验，为客户提供定制化解决方案
               </div>
               <div class="footer">
-                <div>
+                <div @click="show = true">
                   <span>立即了解</span>
                   <i class="iconfont icon-arrow"></i>
                 </div>
@@ -529,7 +522,7 @@ export default {
         .item {
           height: 18.24rem;
 
-          > div {
+          .content {
             padding: 0.8rem 0.64rem 0;
             bottom: 0;
             height: 2.56rem;

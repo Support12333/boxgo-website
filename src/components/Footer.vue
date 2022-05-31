@@ -2,11 +2,7 @@
   <div class="footer">
     <div class="container">
       <div class="row contact">
-        <div class="col-12 col-lg-3">联系人：许经理</div>
-        <div class="col-12 col-lg-3">联系方式：17267286526</div>
-        <div class="col-12 col-lg-6">
-          地址：长沙市岳麓区长沙芯城科技园1栋704室
-        </div>
+        <div class="col-12">粤公网安备44030702002388号（占位文）</div>
       </div>
     </div>
   </div>
