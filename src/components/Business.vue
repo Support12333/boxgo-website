@@ -10,7 +10,7 @@
         <div class="col-12 col-lg-2"></div>
         <div class="col-12 col-lg-8">
           <div class="describe" id="business2">
-            为企业提供可定制组合的全案服务产品，满足电商、游戏、APP、品牌等中国企业的海外商业深入拓展
+            为企业提供数字化可定制组合的全案服务产品，满足电商、游戏、APP、品牌等中国企业的海外商业拓展并取得成功
           </div>
         </div>
         <div class="col-12 col-lg-2"></div>
@@ -21,14 +21,16 @@
             class="item"
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
+            @click="show = true"
           >
-            <div>
+            <div class="bg"></div>
+            <div class="content">
               <div class="tit">大媒体开户业务</div>
               <div class="txt">
                 facebook、google、tiktok等主流媒体及当地媒体一站式账户管理服务，帮助企业实现绿色通道快速开户
               </div>
               <div class="footer">
-                <div @click="show = true">
+                <div>
                   <span>立即了解</span>
                   <i class="iconfont icon-arrow"></i>
                 </div>
@@ -41,14 +43,16 @@
             class="item"
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
+            @click="show = true"
           >
-            <div>
+            <div class="bg"></div>
+            <div class="content">
               <div class="tit">金融兑换业务</div>
               <div class="txt">
                 支持全球金融兑换服务，响应快，资金安全有保障，24小时专属客服
               </div>
               <div class="footer">
-                <div @click="show = true">
+                <div>
                   <span>立即了解</span>
                   <i class="iconfont icon-arrow"></i>
                 </div>
@@ -61,14 +65,16 @@
             class="item"
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
+            @click="show = true"
           >
-            <div>
+            <div class="bg"></div>
+            <div class="content">
               <div class="tit">资深代运营业务</div>
               <div class="txt">
                 全球资源代运营服务，24小时专属优化师服务，实时策划调整，为企业ROI保驾护航
               </div>
               <div class="footer">
-                <div @click="show = true">
+                <div>
                   <span>立即了解</span>
                   <i class="iconfont icon-arrow"></i>
                 </div>
@@ -81,14 +87,16 @@
             class="item"
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
+            @click="show = true"
           >
-            <div>
+            <div class="bg"></div>
+            <div class="content">
               <div class="tit">海外红人营销</div>
               <div class="txt">
                 一手对接全球海量优质KOL，覆盖主流媒体平台及热门出海地区
               </div>
               <div class="footer">
-                <div @click="show = true">
+                <div>
                   <span>立即了解</span>
                   <i class="iconfont icon-arrow"></i>
                 </div>
@@ -101,14 +109,16 @@
             class="item"
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
+            @click="show = true"
           >
-            <div>
+            <div class="bg"></div>
+            <div class="content">
               <div class="tit">出海担保业务</div>
               <div class="txt">
                 全球出海担保服务，价格透明合理，公平公正交易，保障供方与需方资金安全，为您省时省心
               </div>
               <div class="footer">
-                <div @click="show = true">
+                <div>
                   <span>立即了解</span>
                   <i class="iconfont icon-arrow"></i>
                 </div>
@@ -121,14 +131,16 @@
             class="item"
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
+            @click="show = true"
           >
-            <div>
+            <div class="bg"></div>
+            <div class="content">
               <div class="tit">人工翻译业务</div>
               <div class="txt">
                 支持全球各语种翻译，服务贴心，实时响应，严格保密，追求客户长期合作共赢
               </div>
               <div class="footer">
-                <div @click="show = true">
+                <div>
                   <span>立即了解</span>
                   <i class="iconfont icon-arrow"></i>
                 </div>
@@ -141,14 +153,16 @@
             class="item"
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
+            @click="show = true"
           >
-            <div>
+            <div class="bg"></div>
+            <div class="content">
               <div class="tit">国际短信业务</div>
               <div class="txt">
                 支持欧美、东南亚、东亚地区国际短信，多年架构和方案设计经验，为客户提供定制化解决方案
               </div>
               <div class="footer">
-                <div @click="show = true">
+                <div>
                   <span>立即了解</span>
                   <i class="iconfont icon-arrow"></i>
                 </div>
@@ -201,7 +215,7 @@ export default {
   methods: {
     // 进入
     hoverItem(e) {
-      const item = $(e.target).children();
+      const item = $(e.target).children(".content");
       if ($(window).width() < 576) {
         const htmlArr = window.getComputedStyle(
           window.document.documentElement
@@ -214,7 +228,7 @@ export default {
     },
     // 离开
     leaveItem(e) {
-      const item = $(e.target).children();
+      const item = $(e.target).children(".content");
       if ($(window).width() < 576) {
         const htmlArr = window.getComputedStyle(
           window.document.documentElement
@@ -294,9 +308,22 @@ export default {
 
         &:hover {
           transform: scale(1.02);
+
+          .bg {
+            background: rgba(153, 153, 153, 0.3);
+          }
         }
 
-        > div {
+        .bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          .size(100%, 100%);
+          background: rgba(153, 153, 153, 0);
+          transition: all 0.4s;
+        }
+
+        .content {
           position: absolute;
           bottom: 0;
           padding: 40px 32px 0;
@@ -328,7 +355,7 @@ export default {
               line-height: 21px;
               font-family: Microsoft YaHei-Regular, Microsoft YaHei;
               font-weight: 400;
-              color: rgba(255, 255, 255, 0.8);
+              color: rgba(255, 255, 255, 1);
               cursor: pointer;
               .fa(center);
               transition: all 0.4s;
@@ -336,14 +363,18 @@ export default {
               &::after {
                 position: absolute;
                 left: 0;
-                right: 0;
                 bottom: 0;
+                width: 0;
                 content: "";
-                border-bottom: 3px solid #0086ff;
+                border-bottom: 3px solid rgb(0, 134, 255);
               }
 
               &:hover {
-                color: rgba(255, 255, 255, 1);
+                color: rgba(0, 134, 255, 1);
+
+                &::after {
+                  width: 100%;
+                }
 
                 > i {
                   margin-left: 24px;
