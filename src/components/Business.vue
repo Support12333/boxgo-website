@@ -22,6 +22,7 @@
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
           >
+            <div class="image"></div>
             <div class="bg"></div>
             <div class="content">
               <div class="tit">大媒体开户业务</div>
@@ -43,6 +44,7 @@
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
           >
+            <div class="image"></div>
             <div class="bg"></div>
             <div class="content">
               <div class="tit">金融兑换业务</div>
@@ -64,6 +66,7 @@
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
           >
+            <div class="image"></div>
             <div class="bg"></div>
             <div class="content">
               <div class="tit">资深代运营业务</div>
@@ -85,6 +88,7 @@
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
           >
+            <div class="image"></div>
             <div class="bg"></div>
             <div class="content">
               <div class="tit">海外红人营销</div>
@@ -106,6 +110,7 @@
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
           >
+            <div class="image"></div>
             <div class="bg"></div>
             <div class="content">
               <div class="tit">出海担保业务</div>
@@ -127,6 +132,7 @@
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
           >
+            <div class="image"></div>
             <div class="bg"></div>
             <div class="content">
               <div class="tit">人工翻译业务</div>
@@ -148,6 +154,7 @@
             @mouseenter="hoverItem($event)"
             @mouseleave="leaveItem($event)"
           >
+            <div class="image"></div>
             <div class="bg"></div>
             <div class="content">
               <div class="tit">国际短信业务</div>
@@ -300,11 +307,22 @@ export default {
         transition: all 0.4s;
 
         &:hover {
-          transform: scale(1.02);
+          .image {
+            transform: scale(1.2);
+          }
 
           .bg {
-            background: rgba(153, 153, 153, 0.3);
+            background: rgba(0, 0, 0, 0.3);
           }
+        }
+
+        .image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          .size(100%, 100%);
+          z-index: 1;
+          transition: all 0.4s;
         }
 
         .bg {
@@ -313,6 +331,7 @@ export default {
           left: 0;
           .size(100%, 100%);
           background: rgba(153, 153, 153, 0);
+          z-index: 2;
           transition: all 0.4s;
         }
 
@@ -321,6 +340,7 @@ export default {
           bottom: 0;
           padding: 40px 32px 0;
           height: 84px;
+          z-index: 3;
           transition: all 0.4s;
 
           .tit {
@@ -386,49 +406,49 @@ export default {
       }
     }
 
-    .col-12:nth-child(1) .item {
+    .col-12:nth-child(1) .item .image {
       background-image: url("~@assets/business1.webp");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
     }
 
-    .col-12:nth-child(2) .item {
+    .col-12:nth-child(2) .item .image {
       background-image: url("~@assets/business2.webp");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
     }
 
-    .col-12:nth-child(3) .item {
+    .col-12:nth-child(3) .item .image {
       background-image: url("~@assets/business3.webp");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
     }
 
-    .col-12:nth-child(4) .item {
+    .col-12:nth-child(4) .item .image {
       background-image: url("~@assets/business4.webp");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
     }
 
-    .col-12:nth-child(5) .item {
+    .col-12:nth-child(5) .item .image {
       background-image: url("~@assets/business5.webp");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
     }
 
-    .col-12:nth-child(6) .item {
+    .col-12:nth-child(6) .item .image {
       background-image: url("~@assets/business6.webp");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
     }
 
-    .col-12:nth-child(7) .item {
+    .col-12:nth-child(7) .item .image {
       background-image: url("~@assets/business7.webp");
       background-repeat: no-repeat;
       background-size: cover;
