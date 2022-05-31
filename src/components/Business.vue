@@ -24,8 +24,8 @@
           >
             <div class="image"></div>
             <div class="bg"></div>
+            <div class="title">大媒体开户业务</div>
             <div class="content">
-              <div class="tit">大媒体开户业务</div>
               <div class="txt">
                 facebook、google、tiktok等主流媒体及当地媒体一站式账户管理服务，帮助企业实现绿色通道快速开户
               </div>
@@ -46,8 +46,8 @@
           >
             <div class="image"></div>
             <div class="bg"></div>
+            <div class="title">金融兑换业务</div>
             <div class="content">
-              <div class="tit">金融兑换业务</div>
               <div class="txt">
                 支持全球金融兑换服务，响应快，资金安全有保障，24小时专属客服
               </div>
@@ -68,8 +68,8 @@
           >
             <div class="image"></div>
             <div class="bg"></div>
+            <div class="title">资深代运营业务</div>
             <div class="content">
-              <div class="tit">资深代运营业务</div>
               <div class="txt">
                 全球资源代运营服务，24小时专属优化师服务，实时策划调整，为企业ROI保驾护航
               </div>
@@ -90,8 +90,8 @@
           >
             <div class="image"></div>
             <div class="bg"></div>
+            <div class="title">海外红人营销</div>
             <div class="content">
-              <div class="tit">海外红人营销</div>
               <div class="txt">
                 一手对接全球海量优质KOL，覆盖主流媒体平台及热门出海地区
               </div>
@@ -112,8 +112,8 @@
           >
             <div class="image"></div>
             <div class="bg"></div>
+            <div class="title">出海担保业务</div>
             <div class="content">
-              <div class="tit">出海担保业务</div>
               <div class="txt">
                 全球出海担保服务，价格透明合理，公平公正交易，保障供方与需方资金安全，为您省时省心
               </div>
@@ -134,8 +134,8 @@
           >
             <div class="image"></div>
             <div class="bg"></div>
+            <div class="title">人工翻译业务</div>
             <div class="content">
-              <div class="tit">人工翻译业务</div>
               <div class="txt">
                 支持全球各语种翻译，服务贴心，实时响应，严格保密，追求客户长期合作共赢
               </div>
@@ -156,8 +156,8 @@
           >
             <div class="image"></div>
             <div class="bg"></div>
+            <div class="title">国际短信业务</div>
             <div class="content">
-              <div class="tit">国际短信业务</div>
               <div class="txt">
                 支持欧美、东南亚、东亚地区国际短信，多年架构和方案设计经验，为客户提供定制化解决方案
               </div>
@@ -314,6 +314,14 @@ export default {
           .bg {
             background: rgba(0, 0, 0, 0.3);
           }
+
+          .title {
+            opacity: 0;
+          }
+
+          .content {
+            opacity: 1;
+          }
         }
 
         .image {
@@ -335,37 +343,45 @@ export default {
           transition: all 0.4s;
         }
 
+        .title {
+          position: absolute;
+          left: 0;
+          bottom: 20px;
+          padding: 0 32px;
+          font-size: 24px;
+          line-height: 36px;
+          font-family: Microsoft YaHei-Bold, Microsoft YaHei;
+          font-weight: bold;
+          z-index: 3;
+          opacity: 1;
+          transition: all 0.4s;
+        }
+
         .content {
           position: absolute;
-          bottom: 0;
-          padding: 40px 32px 0;
-          height: 84px;
-          z-index: 3;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          .size(80%, 84px);
+          z-index: 4;
+          opacity: 0;
           transition: all 0.4s;
 
-          .tit {
-            font-size: 24px;
-            line-height: 36px;
-            font-family: Microsoft YaHei-Bold, Microsoft YaHei;
-            font-weight: bold;
-          }
-
           .txt {
-            margin-top: 8px;
-            font-size: 16px;
-            line-height: 24px;
+            font-size: 20px;
+            line-height: 32px;
             font-family: Microsoft YaHei-Regular, Microsoft YaHei;
             font-weight: 400;
           }
 
           .footer {
-            margin-top: 8px;
-            display: flex;
+            margin-top: 24px;
+            .fj(center);
 
             > div {
               position: relative;
-              font-size: 16px;
-              line-height: 21px;
+              font-size: 22px;
+              line-height: 24px;
               font-family: Microsoft YaHei-Regular, Microsoft YaHei;
               font-weight: 400;
               color: rgba(255, 255, 255, 1);
@@ -542,28 +558,26 @@ export default {
         .item {
           height: 18.24rem;
 
+          .tit {
+            padding: 0 0.8rem;
+            font-size: 0.96rem;
+            line-height: 1.44rem;
+          }
+
           .content {
-            padding: 0.8rem 0.64rem 0;
-            bottom: 0;
             height: 2.56rem;
 
-            .tit {
-              font-size: 0.96rem;
-              line-height: 1.44rem;
-            }
-
             .txt {
-              margin-top: 0.32rem;
-              font-size: 0.64rem;
-              line-height: 0.96rem;
+              font-size: 0.72rem;
+              line-height: 1.2rem;
             }
 
             .footer {
-              margin-top: 0.32rem;
+              margin-top: 0.96rem;
 
               > div {
-                font-size: 0.64rem;
-                line-height: 0.84rem;
+                font-size: 0.88rem;
+                line-height: 0.88rem;
 
                 &::after {
                   border-bottom-width: 0.12rem;
