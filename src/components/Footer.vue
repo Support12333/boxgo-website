@@ -2,7 +2,12 @@
   <div class="footer">
     <div class="container">
       <div class="row contact">
-        <div class="col-12">粤公网安备44030702002388号（占位文）</div>
+        <div class="col-12">
+          <span>©2022 长沙蓝博网络技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index"
+            >湘ICP备2022010591号</a
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -29,6 +34,11 @@ export default {};
 
     .col-12 {
       margin: 4px 0;
+
+      a {
+        margin-left: 15px;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -40,6 +50,12 @@ export default {};
     .contact {
       font-size: 0.64rem;
       line-height: 0.76rem;
+
+      .col-12 {
+        a {
+          display: none;
+        }
+      }
     }
   }
 }
