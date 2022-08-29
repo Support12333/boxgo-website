@@ -1,62 +1,61 @@
 <template>
   <div class="footer">
     <div class="container">
-      <div class="row contact">
+      <div class="row">
         <div class="col-12">
-          <span>©2022 长沙蓝博网络技术有限公司</span>
-          <a href="https://beian.miit.gov.cn/#/Integrated/index"
-            >湘ICP备2022010591号</a
-          >
+          <div class="policy">
+            <div>Terms of Service</div>
+            <div>Privacy Policy</div>
+            <div>Email：first@pandotar.com</div>
+          </div>
+          <div class="line"></div>
+          <div class="company">Copyright © 2022 Box Go. All Rights Reserved</div>
         </div>
       </div>
     </div>
   </div>
 </template>
-
 <script>
-export default {};
+export default {
+  data() {
+    return {
+    }
+  },
+};
 </script>
-
 <style lang="less" scoped>
 .footer {
-  position: relative;
-  padding: 52px 0;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: inset 0 1px 0 #e5e6e8;
+  margin-top: 140px;
+  padding: 40px 0;
+  background-color: #FFFFFF;
 
-  .contact {
-    font-size: 16px;
-    line-height: 19px;
-    font-family: Microsoft YaHei-Regular, Microsoft YaHei;
-    font-weight: 400;
-    color: #666666;
-    text-align: center;
-
-    .col-12 {
-      margin: 4px 0;
-
-      a {
-        margin-left: 15px;
-        text-decoration: none;
-      }
+  .policy {
+    .fa(center);
+    >div {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      text-transform: capitalize;
+      color: #606266;
+    }
+    div+div{
+      margin-left: 40px;
     }
   }
-}
 
-@media (max-width: 576px) {
-  .footer {
-    padding: 1.2rem 0;
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: #E7E7E7;
+    margin: 24px 0;
+  }
 
-    .contact {
-      font-size: 0.64rem;
-      line-height: 0.76rem;
-
-      .col-12 {
-        a {
-          display: none;
-        }
-      }
-    }
+  .company {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: #606266;
   }
 }
 </style>

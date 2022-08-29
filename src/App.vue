@@ -1,28 +1,65 @@
 <template>
   <div id="app">
-    <Layout />
-    <Banner />
-    <Business />
-    <Introduce />
+    <Header />
+    <Prize />
     <About />
     <Footer />
   </div>
 </template>
 
 <script>
-import Layout from "./components/Layout.vue";
-import Banner from "./components/Banner.vue";
-import Business from "./components/Business.vue";
-import Introduce from "./components/Introduce.vue";
+import Header from "./components/Header.vue";
+import Prize from "./components/Prize.vue";
 import About from "./components/About.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
-  components: { Layout, Banner, Business, Introduce, About, Footer },
+  components: { Prize, About, Header, Footer },
 };
 </script>
 
 <style lang="less">
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+ul li {
+  list-style: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none !important;
+  background: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
@@ -60,7 +97,9 @@ body {
 
 #app {
   height: 100%;
-  background: #f6f6f6;
+  font-family: 'Microsoft YaHei UI';
+  font-style: normal;
+  background: #F3F3F3;
 }
 
 .row {
