@@ -1,5 +1,5 @@
 <template>
-  <div class="prize">
+  <div class="prize" id="prize">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -33,6 +33,28 @@ export default {
         // delay: 3000,
         slidesPerView: 5,
         // loopedSlides: 5,
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 60,
+          },
+          1323: {
+            slidesPerView: 5,
+            spaceBetween: 70,
+          }
+        },
       }
     }
   },
