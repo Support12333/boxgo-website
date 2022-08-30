@@ -5,10 +5,10 @@
         <div class="top">
           <ul class="menu">
             <div class="logo"><img src="@assets/logo.png" alt=""></div>
-            <li><a href="#prize" class="scroll-link" data-id="prize">Prize display</a></li>
-            <li><a href="#about" class="scroll-link" data-id="about">About box go</a></li>
+            <li><a href="#prize" class="scroll-link" data-id="prize">{{ $t("title1") }}</a></li>
+            <li><a href="#about" class="scroll-link" data-id="about">{{ $t("title2") }}</a></li>
           </ul>
-          <div class="download">Download APP</div>
+          <div class="download">{{ $t("download") }}</div>
         </div>
       </div>
     </div>
@@ -16,15 +16,15 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-7 left">
-            <div class="title">Box Go</div>
-            <div class="tit">This Box is Awesome</div>
+            <div class="title">{{ $t("boxgo") }}</div>
+            <div class="tit">{{ $t("tit1") }}</div>
             <div class="txt">
-              <div>1, Unboxing online, lots of surprises</div>
-              <div>2. Directly recycle items you don't like</div>
-              <div>3. Authentic trendy goods, fun game play</div>
-              <div>4. Buff blessing, good luck upgrade</div>
+              <div>{{ $t("txt1") }}</div>
+              <div>{{ $t("txt2") }}</div>
+              <div>{{ $t("txt3") }}</div>
+              <div>{{ $t("txt4") }}</div>
             </div>
-            <div class="download"><a href="">Download APP</a></div>
+            <div class="download"><a href="">{{ $t("download") }}</a></div>
           </div>
           <div class="col-12 col-md-5 right">
             <div class="image"></div>
@@ -159,6 +159,7 @@ export default {
     .left {
       .fj(center);
       flex-direction: column;
+      animation: leftShow 2s;
 
       .title {
         font-size: 48px;
@@ -197,15 +198,45 @@ export default {
       }
     }
 
-    .image {
-      width: 100%;
-      height: 576px;
-      background-image: url("~@assets/banner.png");
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-position: center;
 
+    .right {
+      animation: rightShow 2s;
+
+      .image {
+        width: 100%;
+        height: 576px;
+        background-image: url("~@assets/banner.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+
+      }
     }
+
+    @keyframes leftShow {
+      0% {
+        transform: translateX(-200px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes rightShow {
+      0% {
+        transform: translateX(200px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
   }
 }
 
@@ -284,7 +315,8 @@ export default {
 
 @media (max-width:576px) {
   .main {
-  height: 28.8rem;
+    height: 28.8rem;
+
     .head {
       .top {
         .menu {
@@ -352,7 +384,6 @@ export default {
           width: 12.64rem;
           height: 12.64rem;
           background-position: top;
-
         }
       }
 

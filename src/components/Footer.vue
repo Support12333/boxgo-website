@@ -4,12 +4,12 @@
       <div class="row">
         <div class="col-12">
           <div class="policy">
-            <div class="arrow"><a href="">Terms of Service</a></div>
-            <div class="arrow"><a href="">Privacy Policy</a></div>
-            <div><a href="">Email：first@pandotar.com</a></div>
+            <div class="arrow"><a href="">{{ $t("service") }}</a></div>
+            <div class="arrow"><a href="">{{ $t("policy") }}</a></div>
+            <div><a href="javascript:;">{{ $t("email") }}</a></div>
           </div>
           <div class="line"></div>
-          <div class="company">Copyright © 2022 Box Go. All Rights Reserved</div>
+          <div class="company">{{ $t("company") }}</div>
         </div>
       </div>
     </div>

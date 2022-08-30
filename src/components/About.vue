@@ -3,21 +3,15 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="title">
-            About box go
-          </div>
+          <div class="title"  id="about1">{{ $t("tit3") }}</div>
         </div>
         <div class="col-12 col-md-1"></div>
-        <div class="col-12 col-md-10">
-          <div class="txt">box go is a practical mobile shopping software. The platform provides the latest commodity
-            resources in real time, with strong service capabilities, a complete range of commodities, simple operation
-            and a lot of discounts.</div>
-          <div class="txt">Whether it is a product that boys like or girls like, it can be purchased from the software.
-          </div>
-          <div class="txt">After the payment is successful, you can quickly open the Mystery box and view related
-            products.</div>
-          <div class="txt">All blind boxes have no empty prizes, no need to worry about buying fake goods.</div>
-          <div class="txt">A lot of goodies are available for purchase, and you can choose whatever you want.</div>
+        <div class="col-12 col-md-10"  id="about2">
+          <div class="txt">{{ $t("txt6") }}</div>
+          <div class="txt">{{ $t("txt7") }}</div>
+          <div class="txt">{{ $t("txt8") }}</div>
+          <div class="txt">{{ $t("txt9") }}</div>
+          <div class="txt">{{ $t("txt10") }}</div>
         </div>
         <div class="col-12 col-md-1"></div>
       </div>
@@ -33,7 +27,7 @@ export default {
   },
   mounted() {
     $(document).scroll(() => {
-      for (let index = 1; index < 1; index++) {
+      for (let index = 1; index < 3; index++) {
         Restore(`#about${index}`);
       }
     });

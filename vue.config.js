@@ -32,6 +32,7 @@ module.exports = {
   chainWebpack: config => {
     config.resolve.alias.set('@', resolve('src'))
       .set('@assets', resolve('src/assets'))
+      .set('@i18n', resolve('src/i18n'))
       .set('@utils', resolve('src/utils'))
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal'];
     types.forEach(type => addStyleResource(config.module.rule('less').oneOf(type)));
