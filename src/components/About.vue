@@ -7,8 +7,8 @@
             About box go
           </div>
         </div>
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-12 col-md-1"></div>
+        <div class="col-12 col-md-10">
           <div class="txt">box go is a practical mobile shopping software. The platform provides the latest commodity
             resources in real time, with strong service capabilities, a complete range of commodities, simple operation
             and a lot of discounts.</div>
@@ -19,7 +19,7 @@
           <div class="txt">All blind boxes have no empty prizes, no need to worry about buying fake goods.</div>
           <div class="txt">A lot of goodies are available for purchase, and you can choose whatever you want.</div>
         </div>
-        <div class="col-2"></div>
+        <div class="col-12 col-md-1"></div>
       </div>
     </div>
 
@@ -30,6 +30,13 @@ export default {
   data() {
     return {
     }
+  },
+  mounted() {
+    $(document).scroll(() => {
+      for (let index = 1; index < 1; index++) {
+        Restore(`#about${index}`);
+      }
+    });
   },
 };
 </script>
@@ -53,6 +60,42 @@ export default {
     text-transform: capitalize;
     color: #131414;
     margin-top: 16px;
+  }
+}
+
+@media (max-width:992px) {
+  .about {
+    .title {
+      font-size: 38px;
+      line-height: 48px;
+      margin: 60px 0 20px;
+    }
+
+    .txt {
+      font-size: 14px;
+      line-height: 22px;
+      margin-top: 14px;
+    }
+  }
+}
+
+@media (max-width:576px) {
+  .about {
+    .title {
+      font-size: .96rem;
+      line-height: 1.28rem;
+      margin: .96rem 0 .64rem;
+    }
+
+    .txt {
+      font-weight: 400;
+      font-size: .56rem;
+      line-height: .88rem;
+      text-align: center;
+      text-transform: capitalize;
+      color: #131414;
+      margin-top: .32rem;
+    }
   }
 }
 </style>

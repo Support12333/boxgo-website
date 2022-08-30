@@ -6,7 +6,8 @@
           <div class="title">Prize display</div>
           <div class="txt">100% winning, massive prizes are waiting for you</div>
           <swiper :options="options">
-            <swiper-slide v-for="(item, index) in list" :key="index" class="slide"><img :src="item" alt="">
+            <swiper-slide v-for="(item, index) in list" :key="index" class="slide" :class="[isclass ? 'swiper-no-swiping' : '']">
+              <img :src="item" alt="">
             </swiper-slide>
           </swiper>
           <div class="btns"><a href="">open the box now</a></div>
@@ -32,11 +33,11 @@ export default {
         loop: true,
         // delay: 3000,
         slidesPerView: 5,
-        // loopedSlides: 5,
+        loopedSlides:5,
         breakpoints: {
           640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
+            slidesPerView: "auto",
+            spaceBetween: 0,
           },
           768: {
             slidesPerView: 2,
@@ -55,8 +56,20 @@ export default {
             spaceBetween: 70,
           }
         },
-      }
+      },
+      isclass:false
     }
+  },
+  mounted() {
+    if (document.documentElement.clientWidth >= 1323) {
+      this.isclass= true
+
+    }
+    $(document).scroll(() => {
+      for (let index = 1; index < 1; index++) {
+        Restore(`#prize${index}`);
+      }
+    });
   },
 };
 </script>
@@ -104,6 +117,75 @@ export default {
       border-radius: 65px;
     }
   }
+
+}
+
+@media (max-width:992px) {
+  .prize {
+    .title {
+      font-size: 28px;
+      line-height: 44px;
+      margin-top: 40px;
+    }
+
+    .txt {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 40px;
+      margin-top: 6px;
+    }
+
+    .swiper-slide {
+      .fa(center);
+    }
+
+    .btns {
+      >a {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+  }
+}
+
+@media (max-width:576px) {
+  .prize {
+    .title {
+      font-size: .96rem;
+      line-height: 1.28rem;
+      margin-top: 1.28rem;
+    }
+
+    .txt {
+      font-size: .56rem;
+      line-height: .88rem;
+      margin-bottom: 1.28rem;
+      margin-top: .32rem;
+    }
+
+    .slide {
+      >img {
+        width: 9.52rem;
+        height: 20.64rem;
+      }
+    }
+
+    .swiper-slide {
+      width: 80%;
+    }
+
+    .btns {
+      margin: 1.44rem 0;
+
+      >a {
+        font-size: .64rem;
+        line-height: .96rem;
+        padding: .48rem .64rem;
+      }
+    }
+  }
+
 
 }
 </style>

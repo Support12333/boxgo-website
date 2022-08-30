@@ -12,10 +12,10 @@
         </div>
       </div>
     </div>
-    <div class="box">
+    <div class="box" id="box">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-7 left">
+          <div class="col-12 col-md-7 left">
             <div class="title">Box Go</div>
             <div class="tit">This Box is Awesome</div>
             <div class="txt">
@@ -26,7 +26,7 @@
             </div>
             <div class="download"><a href="">Download APP</a></div>
           </div>
-          <div class="col-12 col-lg-5">
+          <div class="col-12 col-md-5 right">
             <div class="image"></div>
           </div>
         </div>
@@ -95,13 +95,7 @@ export default {
   position: relative;
 
   .head {
-    // position: sticky;
-    // top: 0;
-    // left: 0;
-    // right: 0;
-    z-index: 99;
     background: transparent;
-    transition: all 0.4s;
 
     .top {
       .flex(space-between, center);
@@ -121,13 +115,13 @@ export default {
 
         >li {
           width: 214px;
+          text-align: center;
 
           a {
             font-weight: 700;
             font-size: 20px;
             line-height: 28px;
             text-transform: capitalize;
-            text-align: center;
             color: rgba(255, 255, 255, 0.7);
             cursor: pointer;
 
@@ -147,30 +141,12 @@ export default {
         padding: 8px 16px;
         border: 1px solid #FFFFFF;
         border-radius: 65px;
-      }
-    }
-  }
 
-  .white {
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
-
-    .top {
-      .menu {
-        >li {
-          >a {
-            color: rgba(51, 51, 51, 0.6);
-          }
-
-          &:hover>a {
-            color: rgba(51, 51, 51, 1);
-          }
+        &:hover {
+          color: #FF470E;
+          background-color: #FFFFFF;
+          transition: all 0.4s;
         }
-      }
-
-      .download {
-        color: rgba(51, 51, 51, 0.6);
-        border: 1px solid rgba(51, 51, 51, 0.6);
       }
     }
   }
@@ -212,10 +188,13 @@ export default {
           padding: 8px 16px;
           background-color: #FFFFFF;
           border-radius: 65px;
+
+          &:hover {
+            transform: translateY(10px);
+            transition: all 0.4s;
+          }
         }
-
       }
-
     }
 
     .image {
@@ -225,6 +204,157 @@ export default {
       background-repeat: no-repeat;
       background-size: 100%;
       background-position: center;
+
+    }
+  }
+}
+
+@media (max-width:992px) {
+  .main {
+    height: 800px;
+
+    .head {
+
+      .top {
+
+        .menu {
+          height: 72px;
+
+          .logo {
+            >img {
+              width: 36px;
+              height: 36px;
+            }
+
+            margin-right: 20px;
+          }
+
+          >li {
+            width: 180px;
+
+            a {
+              font-size: 16px;
+              line-height: 54px;
+            }
+          }
+        }
+
+        .download {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .box {
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-top: 40px;
+
+      .left {
+        .title {
+          font-size: 36px;
+          line-height: 48px;
+        }
+
+        .tit {
+          margin-top: 12px;
+          font-size: 42px;
+          line-height: 54px;
+        }
+
+        .txt {
+          margin: 20px 0;
+
+          >div {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+
+        .download {
+          >a {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:576px) {
+  .main {
+  height: 28.8rem;
+    .head {
+      .top {
+        .menu {
+          height: 2.88rem;
+
+          .logo {
+            >img {
+              width: 1.52rem;
+              height: 1.6rem;
+            }
+          }
+
+          >li {
+            display: none;
+          }
+        }
+
+        .download {
+          font-size: .48rem;
+          line-height: .8rem;
+          padding: .24rem .48rem;
+        }
+      }
+    }
+
+    .box {
+      margin-top: 1.28rem;
+
+      .left {
+        .title {
+          font-size: .96rem;
+          line-height: 1.28rem;
+        }
+
+        .tit {
+          margin-top: .32rem;
+          font-size: .96rem;
+          line-height: 1.28rem;
+        }
+
+        .txt {
+          margin: .64rem 0;
+
+          >div {
+            font-size: .56rem;
+            line-height: .88rem;
+          }
+        }
+
+        .download {
+          >a {
+            font-size: .48rem;
+            line-height: .8rem;
+          }
+
+        }
+
+      }
+
+      .right {
+        .fj(center);
+        margin-top: .64rem;
+
+        .image {
+          width: 12.64rem;
+          height: 12.64rem;
+          background-position: top;
+
+        }
+      }
 
     }
   }
