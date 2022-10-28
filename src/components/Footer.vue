@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col-12">
           <div class="policy">
-            <div class="arrow"><a href="">{{ $t("service") }}</a></div>
-            <div class="arrow"><a href="">{{ $t("policy") }}</a></div>
+            <div class="arrow"><a href="javascript:;">{{ $t("service") }}</a></div>
+            <div class="arrow"><a href="https://www.app-privacy-policy.com/live.php?token=sdE1ZtFuHzNK6FOF9jg3GknOWnYhr9xd">{{ $t("policy") }}</a></div>
             <div><a href="javascript:;">{{ $t("email") }}</a></div>
           </div>
           <div class="line"></div>

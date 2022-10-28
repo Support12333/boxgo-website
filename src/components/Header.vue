@@ -5,10 +5,10 @@
         <div class="top">
           <ul class="menu">
             <div class="logo"><img src="@assets/logo.png" alt=""></div>
-            <li><a href="#prize" class="scroll-link" data-id="prize">{{ $t("title1") }}</a></li>
-            <li><a href="#about" class="scroll-link" data-id="about">{{ $t("title2") }}</a></li>
+            <li><a href="#prize" class="scroll-link" data-id="prize">{{  $t("title1")  }}</a></li>
+            <li><a href="#about" class="scroll-link" data-id="about">{{  $t("title2")  }}</a></li>
           </ul>
-          <div class="download">{{ $t("download") }}</div>
+          <div class="download"><a href="https://play.google.com/store/apps/details?id=com.playworld.boxgo.boxgo">{{  $t("download")  }}</a></div>
         </div>
       </div>
     </div>
@@ -16,15 +16,15 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-7 left">
-            <div class="title">{{ $t("boxgo") }}</div>
-            <div class="tit">{{ $t("tit1") }}</div>
+            <div class="title">{{  $t("boxgo")  }}</div>
+            <div class="tit">{{  $t("tit1")  }}</div>
             <div class="txt">
-              <div>{{ $t("txt1") }}</div>
-              <div>{{ $t("txt2") }}</div>
-              <div>{{ $t("txt3") }}</div>
-              <div>{{ $t("txt4") }}</div>
+              <div class="p1">{{  $t("txt1")  }}</div>
+              <div class="p2">{{  $t("txt2")  }}</div>
+              <div class="p3">{{  $t("txt3")  }}</div>
+              <div class="p4">{{  $t("txt4")  }}</div>
             </div>
-            <div class="download"><a href="">{{ $t("download") }}</a></div>
+            <div class="download"><a href="https://play.google.com/store/apps/details?id=com.playworld.boxgo.boxgo">{{  $t("download")  }}</a></div>
           </div>
           <div class="col-12 col-md-5 right">
             <div class="image"></div>
@@ -133,19 +133,22 @@ export default {
       }
 
       .download {
-        cursor: pointer;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 24px;
-        color: #FFFFFF;
-        padding: 8px 16px;
-        border: 1px solid #FFFFFF;
-        border-radius: 65px;
+        >a {
+          display: block;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          color: #FFFFFF;
+          padding: 8px 16px;
+          border: 1px solid #FFFFFF;
+          border-radius: 65px;
 
-        &:hover {
-          color: #FF470E;
-          background-color: #FFFFFF;
-          transition: all 0.4s;
+          &:hover {
+            color: #FF470E;
+            background-color: #FFFFFF;
+            transition: all 0.4s;
+          }
         }
       }
     }
@@ -159,17 +162,18 @@ export default {
     .left {
       .fj(center);
       flex-direction: column;
-      animation: leftShow 2s;
 
       .title {
         font-size: 48px;
         line-height: 56px;
+        animation: leftShow1 2.4s;
       }
 
       .tit {
         margin-top: 16px;
         font-size: 56px;
         line-height: 64px;
+        animation: leftShow2 2.4s;
       }
 
       .txt {
@@ -182,6 +186,8 @@ export default {
       }
 
       .download {
+        animation: leftShow7 2.6s;
+
         >a {
           font-size: 16px;
           line-height: 24px;
@@ -195,6 +201,22 @@ export default {
             transition: all 0.4s;
           }
         }
+      }
+
+      .p1 {
+        animation: leftShow3 2.3s;
+      }
+
+      .p2 {
+        animation: leftShow4 2.3s;
+      }
+
+      .p3 {
+        animation: leftShow5 2.4s;
+      }
+
+      .p4 {
+        animation: leftShow6 2.4s;
       }
     }
 
@@ -213,9 +235,81 @@ export default {
       }
     }
 
-    @keyframes leftShow {
+    @keyframes leftShow1 {
       0% {
-        transform: translateX(-200px);
+        transform: translateX(-140px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes leftShow2 {
+      0% {
+        transform: translateX(-160px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes leftShow3 {
+      0% {
+        transform: translateX(-180px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes leftShow4 {
+      0% {
+        transform: translateX(-210px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes leftShow5 {
+      0% {
+        transform: translateX(-240px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes leftShow6 {
+      0% {
+        transform: translateX(-280px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes leftShow7 {
+      0% {
+        transform: translateX(-300px);
         opacity: 0;
       }
 
@@ -236,7 +330,6 @@ export default {
         opacity: 1;
       }
     }
-
   }
 }
 

@@ -3,14 +3,14 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="title" id="prize1">{{ $t("tit2") }}</div>
+          <div class="title" id="prize1">{{ $t("title1") }}</div>
           <div class="txt"  id="prize2">{{ $t("txt5") }}</div>
           <swiper :options="options"  id="prize3">
             <swiper-slide v-for="(item, index) in list" :key="index" class="slide" :class="[isclass ? 'swiper-no-swiping' : '']">
               <img :src="item" alt="">
             </swiper-slide>
           </swiper>
-          <div class="btns"  id="prize4"><a href="">{{ $t("btn1") }}</a></div>
+          <div class="btns"  id="prize4"><a href="https://play.google.com/store/apps/details?id=com.playworld.boxgo.boxgo">{{ $t("btn1") }}</a></div>
         </div>
       </div>
     </div>
